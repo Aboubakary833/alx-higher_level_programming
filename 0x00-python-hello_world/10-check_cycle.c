@@ -13,7 +13,7 @@ while (cpy && tmp && cpy->next)
 {
 	tmp = tmp->next;
 	cpy = cpy->next->next;
-	if (tmp->next->n == cpy->n)
+	if (tmp == cpy)
 		return (1);
 }
 return (0);

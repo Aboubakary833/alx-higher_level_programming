@@ -1,3 +1,5 @@
 */*.test.py
 push
 */push
+*/main.test.c
+*/a.out
