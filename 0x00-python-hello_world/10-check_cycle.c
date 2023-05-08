@@ -9,7 +9,7 @@ int check_cycle(listint_t *list)
 {
 listint_t *cpy = list;
 listint_t *tmp;
-while (cpy && cpy->next)
+while (cpy != NULL && cpy->next != NULL)
 {
 	tmp = cpy->next;
 	while (tmp != NULL)
