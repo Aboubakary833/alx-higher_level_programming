@@ -14,7 +14,7 @@ while (cpy != NULL)
 	tmp = cpy;
 	while (tmp->next != NULL)
 	{
-		if (tmp->next->n == cpy->n)
+		if (tmp->next == cpy)
 			return (1);
 		tmp = tmp->next;
 	}
