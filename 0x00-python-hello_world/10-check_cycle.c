@@ -7,19 +7,18 @@
 */
 int check_cycle(listint_t *list)
 {
-listint_t *cpy_1 = list;
-listint_t *cpy_2 = list;
-listint_t *tmp = list;
-while (cpy_1 && cpy_2)
+listint_t *cpy = list;
+listint_t *tmp;
+while (cpy != NULL)
 {
-	tmp = cpy_1->next;
-	if (tmp)
+	tmp = cpy;
+	while (tmp->next != NULL)
 	{
-		cpy_2 = cpy_1->next;
-		cpy_1 = tmp->next;
+		if (tmp->next->n == cpy->n)
+			return (1);
+		tmp = tmp->next;
 	}
-	if (cpy_1 == cpy_2)
-		return (1);
+	cpy = cpy->next;
 }
 return (0);
 }
