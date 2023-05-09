@@ -2,5 +2,5 @@
 for n in range(10):
     for m in range(n + 1, 10):
         if (n != 8):
-            print(f"{n}{m}, ", end="")
+            print("{}{}, ".format(n, m), end="")
 print("")
