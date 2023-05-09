@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print(''.join(list(map(chr, range(97, 123)))))
+print(f"{''.join(list(map(chr, range(97, 123))))}")
