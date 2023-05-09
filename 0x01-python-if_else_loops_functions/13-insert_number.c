@@ -16,10 +16,11 @@ if (new == NULL)
 	return (NULL);
 new->n = number;
 current = *head;
-if (current == NULL || current->n > number)
+if (current == NULL || current->n == 0 || current->n >= number)
 {
 	new->next = (*head);
 	(*head) = new;
+	return (new);
 }
 while (current != NULL && current->next != NULL && current->next->n < number)
 	current = current->next;
@@ -29,5 +30,5 @@ if (current != NULL)
 	current->next = new;
 }
 
-return (*head);
+return (new);
 }
