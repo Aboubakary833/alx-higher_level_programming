@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("".join("{}".format(chr(l)) for l in list(range(97, 123))))
+for l in list(range(97, 123)):
+	print("{}".format(chr(l)), end="")
+	
