@@ -18,6 +18,8 @@ while (current != NULL)
 }
 current = (*head);
 tmp = (*head);
+if (len % 2 != 0)
+{
 reverse = reverse_listint(&tmp);
 while (i < len / 2 && current != NULL && reverse != NULL)
 {
@@ -26,6 +28,19 @@ while (i < len / 2 && current != NULL && reverse != NULL)
 	current = current->next;
 	reverse = reverse->next;
 	i++;
+}
+}
+else
+{
+reverse = reverse_listint(&tmp);
+while (i < (len / 2 + 1) && current != NULL && reverse != NULL)
+{
+	first[i] = current->n;
+	last[i] = reverse->n;
+	current = current->next;
+	reverse = reverse->next;
+	i++;
+}
 }
 
 for (; i >= 0; i--)
