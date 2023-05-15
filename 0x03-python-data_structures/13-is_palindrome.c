@@ -34,6 +34,5 @@ while (reversed != NULL && current != NULL)
 	reversed = reversed->next;
 	current = current->next;
 }
-
 return (1);
 }
