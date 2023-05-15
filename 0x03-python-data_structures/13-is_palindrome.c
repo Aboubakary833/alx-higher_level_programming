@@ -11,22 +11,8 @@ listint_t *current, *reversed, *tmp;
 if ((*head) == NULL)
 	return (1);
 current = (*head);
-while (current != NULL)
-{
-	if (reversed == NULL)
-	{
-		reversed->n = current->n;
-		reversed->next = NULL;
-		current = current->next;
-	}
-	else
-	{
-		tmp = current->next;
-		current->next = reversed;
-		reversed = current;
-		current = tmp;
-	}
-}
+tmp = (*head);
+reversed = reverse_listint(&tmp);
 while (reversed != NULL && current != NULL)
 {
 	if (reversed->n != current->n)
@@ -35,4 +21,23 @@ while (reversed != NULL && current != NULL)
 	current = current->next;
 }
 return (1);
+}
+
+/**
+ * reverse_listint - Reverse a int list
+ * @head: The list head
+ * Return: Pointer to the first head
+ */
+listint_t *reverse_listint(listint_t **head)
+{
+listint_t *cur, *next;
+while ((*head) != NULL)
+{
+	next = (*head)->next;
+	(*head)->next = cur;
+	cur = (*head);
+	(*head) = next;
+}
+(*head) = cur;
+return (*head);
 }
