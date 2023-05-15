@@ -7,12 +7,11 @@
 */
 int is_palindrome(listint_t **head)
 {
-listint_t *current, *reversed, *tmp;
+listint_t *current, *reversed;
 if ((*head) == NULL || (*head)->next)
 	return (1);
 current = (*head);
-tmp = (*head);
-reversed = reverse_listint(&tmp);
+reversed = reverse_listint(head);
 while (reversed != NULL && current != NULL)
 {
 	if (reversed->n != current->n)
