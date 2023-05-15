@@ -16,8 +16,6 @@ while (current != NULL)
 	len++;
 	current = current->next;
 }
-if (len % 2 != 0)
-	return (0);
 current = (*head);
 tmp = (*head);
 reverse = reverse_listint(&tmp);
