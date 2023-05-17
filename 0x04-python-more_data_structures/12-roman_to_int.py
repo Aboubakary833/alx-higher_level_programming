@@ -16,7 +16,7 @@ def roman_to_int(roman_string):
     _split = [*roman_string]
     _dict = {i: _split[i] for i in range(0, len(_split))}
     for k in _dict:
-        if len(_dict) > 1 and _dict[k] == 'X' and _dict[k - 1] == 'I':
+        if len(_dict) > 1 and _dict[k] == 'I' and _dict[k + 1] == 'X':
             equivalent += 8
         else:
             equivalent += romanLetters[_dict[k]]
