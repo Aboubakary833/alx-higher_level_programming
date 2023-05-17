@@ -3,6 +3,7 @@
 def roman_to_int(roman_string):
     if roman_string is None or not isinstance(roman_string, str):
         return 0
+    rs = roman_string
     values = {
         'I': 1,
         'V': 5,
@@ -13,9 +14,9 @@ def roman_to_int(roman_string):
         'M': 1000,
     }
     equivalent = 0
-    for i in range(len(roman_string)):
-            if i > 0 and values[roman_string[i]] > values[roman_string[i - 1]]:
-                equivalent += values[roman_string[i]] - 2 * values[roman_string[i - 1]]
-            else:
-                equivalent += values[roman_string[i]]
+    for i in range(len(rs)):
+        if i > 0 and values[rs[i]] > values[rs[i - 1]]:
+            equivalent += values[rs[i]] - 2 * values[rs[i - 1]]
+        else:
+            equivalent += values[rs[i]]
     return equivalent
