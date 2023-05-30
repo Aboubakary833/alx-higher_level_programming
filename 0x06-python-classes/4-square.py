@@ -24,11 +24,13 @@ class Square:
         """
         return self.__size * self.__size
 
+    @property
     def size(self) -> int:
         """Get a Square instance size
         Return: int"""
         return self.__size
 
+    @size.setter
     def size(self, value):
         """Set a Square instance size
         Args:
