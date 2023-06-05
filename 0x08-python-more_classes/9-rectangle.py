@@ -120,11 +120,18 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        new = None
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
+        """Define a Square variant of a Rectange
+
+                Args:
+                        size (int, 0): Square size. Defaults to 0.
+
+                Raises:
+                        TypeError: raise type error if size is not integer
+                        ValueError: raise value error if size is less than 0
+
+                Returns:
+                        Rectange: the Rectange instance
+                """
         new = cls(size, size)
         new.__size = size
         return new
