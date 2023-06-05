@@ -125,10 +125,6 @@ class Rectangle:
                 Args:
                         size (int, 0): Square size. Defaults to 0.
 
-                Raises:
-                        TypeError: raise type error if size is not integer
-                        ValueError: raise value error if size is less than 0
-
                 Returns:
                         Rectange: the Rectange instance
                 """
