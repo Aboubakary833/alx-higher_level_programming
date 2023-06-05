@@ -94,7 +94,7 @@ class Rectangle:
                     _repr += str(self.print_symbol)
                 except Exception:
                     _repr += type(self).print_symbol
-            if self.__width < self.__height - 1:
+            if i < self.__height - 1:
                 _repr += "\n"
         return _repr
 
