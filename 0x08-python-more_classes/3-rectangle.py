@@ -82,6 +82,8 @@ class Rectangle:
 
     def __str__(self):
         _repr = ""
+        if self.__width == 0 or self.__height == 0:
+            return _repr
         for i in range(self.__height):
             for j in range(self.__width):
                 if j == self.__width - 1:
