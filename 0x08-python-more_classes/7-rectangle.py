@@ -85,14 +85,18 @@ class Rectangle:
             return (2 * self.__width) + (2 * self.__height)
 
     def __str__(self):
+        _repr = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
+            return _repr
         for i in range(self.__height):
             for j in range(self.__width):
-                print(__class__.print_symbol, end="")
-            if i != self.__height - 1:
-                print()
-        return ""
+                try:
+                    _repr += str(self.print_symbol)
+                except Exception:
+                    _repr += type(self).print_symbol
+            if self.__width < self.__height - 1:
+                _repr += "\n"
+        return _repr
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
