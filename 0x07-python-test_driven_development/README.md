@@ -1,2 +1,2 @@
 ## Test Driven Development(TDD) in Python
-![alt text](./images/tdd_meme.jpeg)
+<center><img src="./images/tdd_meme.jpeg" width="360" height="360"></center>
