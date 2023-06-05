@@ -124,7 +124,6 @@ class Rectangle:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            new = cls(size, size)
-            new.__size = size
-            return new
+        new = cls(size, size)
+        new.__size = size
+        return new
