@@ -118,7 +118,7 @@ class Rectangle:
         else:
             return rect_1
 
-    def square(cls, size = 0):
+    def square(cls, size=0):
         new = None
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
