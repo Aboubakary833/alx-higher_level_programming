@@ -1,0 +1,30 @@
+
+===============================
+How to Use say_my_name function
+===============================
+
+This module defines a function that print one's fullname ``say_my_name(first_name, last_name="")``.
+
+Usage
+=====
+
+``add_integer(a, b)``` get first_name and last_name, concatenate them and
+print the full name to the screen.
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Aboubakary", "Cissé")
+    My name is Aboubakary Cissé
+    >>> add_integer("John", "Doe")
+    My name is John Doe
+
+If first_name or last_name is'nt a string, a TypeError is raised
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Aboubakary", 8)
+    Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name([], "Cissé")
+    Traceback (most recent call last):
+	TypeError: first_name must be a string
