@@ -1,0 +1,55 @@
+
+==============================
+How to Use 2-matrix_divided.py
+==============================
+
+This module defines a matrix division function ``matrix_divided(matrix, div)``.
+
+Usage
+=====
+
+``matrix_divided(matrix, div)`` returns a new matrix that is a copy of the parameter
+``matrix`` with all elements divided by ``div``.
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [6, 9, 12],
+    ...     [18, 15, 21]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[2.0, 3.0, 4.0], [6.0, 5.0, 7.0]]
+
+    >>> matrix = [
+    ...     [3, 3, 3],
+    ...     [4, 6, 12]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[1.0, 1.0, 1.0], [1.33, 2.0, 4.0]]
+
+The parameter ``matrix`` must be a list of lists consisting of either ints or
+floats. If ``matrix`` is not a list, a TypeError is raised.
+
+	>>> matrix = (1, 2)
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+If empty list is passed, a TypeError will be raised
+
+    >>> matrix = []
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+But an empty list of lists will succeed.
+
+The parameter ``div`` must be either an int or float. Otherwise, a TypeError
+is raised.
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, "not a number"))
+    Traceback (most recent call last):
+    TypeError: div must be a number
