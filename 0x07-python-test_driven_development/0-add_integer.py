@@ -4,7 +4,10 @@ def add_integer(a, b=98):
     """Return addition of a and b
 
     Float arguments are casted to ints before addition.
-
+    >>> add_integer(1, 3)
+    4
+    >>> add_integer(1, -4)
+    3
     Raises:
         TypeError: If either of a or b is a non-integer and non-float.
     """
