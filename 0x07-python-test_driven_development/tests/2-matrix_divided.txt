@@ -71,3 +71,18 @@ The parameter "div" can't be a zero. Otherwise a ZeroDivisionError is raised.
     >>> print(matrix_divided(matrix, 0))
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
+
+If only one or no argument is passed to the function, a TypeError is raised:
+
+    >>> print(matrix_divided())
+    Traceback (most recent call):
+    print(matrix_divided())
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix))
+    Traceback (most recent call):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
