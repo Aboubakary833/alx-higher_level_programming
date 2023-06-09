@@ -26,9 +26,9 @@ Usage
     >>> print(matrix_divided(matrix, 3))
     [[1.0, 1.0, 1.0], [1.33, 2.0, 4.0]]
 
-    >>> matrix = [[]]
-    >>> print(matrix_divided(matrix, 3))
-    [[]]
+    >>> matrix = [[], []]
+    >>> print(matrix_divided(matrix, 2))
+    [[], []]
 
 The parameter ``matrix`` must be a list of lists consisting of either ints or
 floats. If ``matrix`` is not a list, a TypeError is raised.
