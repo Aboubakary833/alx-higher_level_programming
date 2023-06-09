@@ -17,10 +17,12 @@ print the full name to the screen.
     >>> say_my_name("John", "Doe")
     My name is John Doe
 
-If first_name or last_name is'nt a string, a TypeError is raised
+If first_name or last_name is'nt a string, a TypeError is raised.
 
-	>>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name([], "Cissé")
+    >>> say_my_name((), "Johnson")
     Traceback (most recent call last):
-	TypeError: first_name must be a string
-	
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Alvin", 0)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
