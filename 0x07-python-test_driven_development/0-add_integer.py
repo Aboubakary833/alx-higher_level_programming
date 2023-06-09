@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""Integers addition module
+"""
+
+
 def add_integer(a, b=98):
     """Return addition of a and b
 
