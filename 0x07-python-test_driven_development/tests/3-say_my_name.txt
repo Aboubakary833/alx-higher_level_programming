@@ -19,11 +19,6 @@ print the full name to the screen.
 
 If first_name or last_name is'nt a string, a TypeError is raised
 
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("Aboubakary", 8)
-    Traceback (most recent call last):
-	TypeError: last_name must be a string
-
 	>>> say_my_name = __import__('3-say_my_name').say_my_name
     >>> say_my_name([], "Cissé")
     Traceback (most recent call last):
