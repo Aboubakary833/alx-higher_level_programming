@@ -8,13 +8,13 @@ This module defines a function that print one's fullname ``say_my_name(first_nam
 Usage
 =====
 
-``add_integer(a, b)``` get first_name and last_name, concatenate them and
+``say_my_name(first_name, last_name="")``` get first_name and last_name, concatenate them and
 print the full name to the screen.
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
     >>> say_my_name("Aboubakary", "Cissé")
     My name is Aboubakary Cissé
-    >>> add_integer("John", "Doe")
+    >>> say_my_name("John", "Doe")
     My name is John Doe
 
 If first_name or last_name is'nt a string, a TypeError is raised
