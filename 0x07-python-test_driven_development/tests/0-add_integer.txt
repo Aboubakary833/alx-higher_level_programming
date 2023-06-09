@@ -1,10 +1,6 @@
-
-===============================
-How to Use add_integer function
-===============================
-
 This module defines an integer addition function ``add_integer(a, b=98)``.
 
+=====
 Usage
 =====
 

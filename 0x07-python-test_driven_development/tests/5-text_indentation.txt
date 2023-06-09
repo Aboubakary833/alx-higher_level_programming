@@ -1,0 +1,54 @@
+This module defines a matrix division function ``text_indentation(text)``.
+
+=====
+Usage
+=====
+
+``text_indentation(text)`` prints a text with 2 new lines after each of these characters: '.'',' '?' and ':'.
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("John Doe.")
+    John Doe.
+    <BLANKLINE>
+
+	>>> text_indentation("How are you?")
+	How are you?
+	<BLANKLINE>
+
+Spaces are not taken into account.
+
+	>>> text_indentation("    Hello everyone.   ")
+	Hello everyone.
+	<BLANKLINE>
+
+	>>> text_indentation("I'm good.   And you?   ")
+	I'm good.
+	<BLANKLINE>
+	And you?
+	<BLANKLINE>
+
+New lines are printed.
+
+	>>> text_indentation("\nHello\nGuys.")
+	<BLANKLINE>
+	Hello
+	Guys.
+	<BLANKLINE>
+
+Print new line for ':', '.' and '?'.
+
+    >>> text_indentation("My favourites languages:")
+    My favourites languages:
+    <BLANKLINE>
+
+	>>> text_indentation("JavaScript.")
+	JavaScript.
+	<BLANKLINE>
+
+	>>> text_indentation("TypeScript.")
+	TypeScript.
+	<BLANKLINE>
+
+	>>> text_indentation("And C.")
+	And C.
+	<BLANKLINE>
