@@ -13,5 +13,4 @@ def is_kind_of_class(obj: list, a_class) -> bool:
     Returns:
             bool: True or False
     """
-    return all(type(obj) == a_class
-               or issubclass(type(obj), a_class))
+    return isinstance(obj, a_class)
