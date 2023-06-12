@@ -4,13 +4,10 @@
 
 
 class MyList(list):
-    """MyList"""
-
-    def __init__(self):
-        """Initialise the MyList"""
-        super().__init__()
+    """MyList
+    """
 
     def print_sorted(self):
-        """print_sorted"""
-        sorted_list = sorted(self)
-        print(sorted_list)
+        """print_sorted
+        """
+        print(sorted(self))
