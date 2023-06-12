@@ -76,3 +76,11 @@ If object is not define a NameError is raised:
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'my_list2' is not defined
+
+If ``print_sorted`` method is called on non MyList instance, an AttributeError is raised:
+
+>>> my_list = [1, 2, 3]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'print_sorted'
