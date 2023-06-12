@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Rectangle class that inherits from BaseGeometry class."""
 
+
 class BaseGeometry:
     """BaseGeometry."""
 
