@@ -5,9 +5,6 @@
 
 class MyList(list):
     """MyList
-
-    Args:
-            list (list): Native list
     """
 
     def print_sorted(self):
