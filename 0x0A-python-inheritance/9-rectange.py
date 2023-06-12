@@ -1,52 +1,38 @@
 #!/usr/bin/python3
-"""Rectangle class that inherits from BaseGeometry class."""
+"""
+Contains the class BaseGeometry and subclass Rectangle
+"""
 
 
 class BaseGeometry:
-    """BaseGeometry."""
+    """A class with public instance methods area and integer_validator"""
 
     def area(self):
-        """area
-        """
+        """raises an exception when called"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """integer_validator
-
-        Args:
-            name (str): Name.
-            value (int): Value.
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is <= 0.
-        """
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
+        """validates that value is an integer greater than 0"""
+        if type(value) is not int:
+            raise TypeError("{:s} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+            raise ValueError("{:s} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle extending BaseGeometry class."""
+    """A representation of a rectangle"""
 
     def __init__(self, width, height):
-        """Intialize a new Rectangle.
-
-        Args:
-            width (int): The width of the Rectangle.
-            height (int): The height of the Rectangle.
-        """
-        super().integer_validator("width", width)
+        """instantiation of the rectangle"""
+        self.integer_validator("width", width)
         self.__width = width
-        super().integer_validator("height", height)
+        self.integer_validator("height", height)
         self.__height = height
 
     def area(self):
-        """area"""
+        """returns the area of the rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
-        """Return the print() and str() representation of a Rectangle."""
-        string = "[" + str(self.__class__.__name__) + "] "
-        string += str(self.__width) + "/" + str(self.__height)
-        return string
+        """informal string representation of the rectangle"""
+        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
