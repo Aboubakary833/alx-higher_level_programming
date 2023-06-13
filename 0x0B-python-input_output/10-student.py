@@ -30,7 +30,7 @@ class Student:
              """
         if attrs:
             return {
-                k: self.__dict__.get(k)
+                k: self.__dict__[k]
                 for k in attrs
                 if self.__dict__.get(k)
             }
