@@ -6,13 +6,14 @@ def pascal_triangle(n):
     """pascal_triangle
 
     Args:
-            n (int): _description_
+        n (int): Size
 
     Returns:
-            list: list of lists of integers
+        list: list of list of integers
     """
     if n <= 0:
         return []
+
     triangles = [[1]]
     while len(triangles) != n:
         tri = triangles[-1]
@@ -21,4 +22,4 @@ def pascal_triangle(n):
             tmp.append(tri[i] + tri[i + 1])
         tmp.append(1)
         triangles.append(tmp)
-        return triangles
+    return triangles
