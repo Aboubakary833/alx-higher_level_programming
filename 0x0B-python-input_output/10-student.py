@@ -27,7 +27,7 @@ class Student:
              Returns:
                      dict: Dictionary representation of the instance
              """
-        if attrs:
+        if attrs and all(type(attr) == str for attr in attrs):
             return {
                 k: self.__dict__[k]
                 for k in attrs
