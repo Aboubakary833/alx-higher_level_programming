@@ -31,7 +31,7 @@ class Student:
             return {
                 k: self.__dict__[k]
                 for k in attrs
-                if self.__dict__.get(k)
+                if attrs and self.__dict__.get(k)
             }
         else:
             return self.__dict__
