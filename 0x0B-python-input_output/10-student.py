@@ -20,7 +20,6 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        _repr = {}
         """to_json
 
              Args:
