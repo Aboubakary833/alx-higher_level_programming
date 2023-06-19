@@ -56,13 +56,13 @@ class Square(Rectangle):
         """Update a Square instance value
         """
         if args is not None and len(args) is not 0:
-            list_atr = ['id', 'size', 'x', 'y']
+            props = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
-                if list_atr[i] == 'size':
+                if props[i] == 'size':
                     setattr(self, 'width', args[i])
                     setattr(self, 'height', args[i])
                 else:
-                    setattr(self, list_atr[i], args[i])
+                    setattr(self, props[i], args[i])
         else:
             for key, value in kwargs.items():
                 if key == 'size':
