@@ -40,7 +40,7 @@ class Rectangle(Base):
             self.__height = height
             self.__x = x
             self.__y = y
-            super(Rectangle, self).__init__(id)
+            super().__init__(id)
 
     @property
     def width(self) -> int:
@@ -163,9 +163,9 @@ class Rectangle(Base):
         """Update an instance of Rectangle
                 """
         if args is not None and len(args) is not 0:
-            list_atr = ['id', 'width', 'height', 'x', 'y']
+            props = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
-                setattr(self, list_atr[i], args[i])
+                setattr(self, props[i], args[i])
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
