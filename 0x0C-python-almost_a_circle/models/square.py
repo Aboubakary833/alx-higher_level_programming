@@ -70,3 +70,20 @@ class Square(Rectangle):
                     setattr(self, 'height', value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self) -> dict:
+        """Return a dictionnary representation
+        of a Square instance
+        Returns:
+            dict: Representation
+        """
+        props = ['id', 'size', 'x', 'y']
+        _repr = {}
+
+        for i in props:
+            if i == 'size':
+                _repr[i] = getattr(self, 'width')
+            else:
+                _repr[i] = getattr(self, i)
+
+        return _repr
