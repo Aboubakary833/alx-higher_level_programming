@@ -14,9 +14,7 @@ class TestBase(unittest.TestCase):
         test for Base
     """
     def test_creation_id(self):
-        """
-            test if value of id has the good assignment
-        """
+        """Test base class instanciation id"""
         base_1 = Base(5)
         base_2 = Base()
         base_3 = Base(-10.2)
@@ -28,6 +26,16 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_3.id, -10.2)
         self.assertEqual(base_4.id, 3)
         self.assertEqual(base_5.id, 2)
+
+    def test_more_arguments(self):
+        """Test if more arguments raises exception"""
+        with self.assertRaises(TypeError):
+            new_base = Base(3, 5, 6)
+
+    def test_string_id(self):
+        """ Test string id """
+        new_base = Base('5')
+        self.assertEqual(new_base.id, '5')
 
     def test_to_json_string(self):
         json_string = Base.to_json_string(None)
