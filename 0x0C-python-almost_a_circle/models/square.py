@@ -26,3 +26,47 @@ class Square(Rectangle):
         _repr += "{:d}/{:d} - ".format(self.x, self.y)
         _repr += "{:d}".format(self.width, self.height)
         return _repr
+
+    @property
+    def size(self) -> int:
+        """Square size getter
+        Returns:
+            int: Square size value
+        """
+        return self.__width
+
+    @size.setter
+    def size(self, value):
+        """Square size setter
+        Raises:
+            TypeError: value must be an integer
+            ValueError: value must be greater than 0
+        Args:
+            value (int): Square size value
+        """
+        if not isinstance(value, int):
+            raise TypeError("value must be an integer")
+        elif value <= 0:
+            raise ValueError("value must be > 0")
+        else:
+            self.__width = value
+            self.__height = value
+
+    def update(self, *args, **kwargs):
+        """Update a Square instance value
+        """
+        if args is not None and len(args) is not 0:
+            list_atr = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                if list_atr[i] == 'size':
+                    setattr(self, 'width', args[i])
+                    setattr(self, 'height', args[i])
+                else:
+                    setattr(self, list_atr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if key == 'size':
+                    setattr(self, 'width', value)
+                    setattr(self, 'height', value)
+                else:
+                    setattr(self, key, value)
