@@ -158,3 +158,11 @@ class Rectangle(Base):
         _repr += "{:d}/{:d} - ".format(self.x, self.y)
         _repr += "{:d}/{:d}".format(self.width, self.height)
         return _repr
+    
+    def update(self, *args):
+        """Update an instance of Rectangle
+		"""
+        if args is not None and len(args) is not 0:
+            list_atr = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, list_atr[i], args[i])
