@@ -1,4 +1,6 @@
 #!/usr/bin/node
 
-const count = process.argv.length;
-console.log(count === 2 ? 'No argument' : process.argv[2]);
+const { argv } = require('node:process');
+
+const arg = argv.at(2);
+console.log(arg === undefined ? "No argument" : arg);
