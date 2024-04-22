@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-const length = process.argv.length;
+const _l = process.argv.length;
 
-console.log(length === 2 ? 'No argument' : process.argv[2]);
+console.log(_l === 2 ? 'No argument' : process.argv[2]);
