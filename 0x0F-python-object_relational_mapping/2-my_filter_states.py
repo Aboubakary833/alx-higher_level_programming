@@ -11,7 +11,7 @@ if __name__ == "__main__":
     dbname = sys.argv[3]
     filter_value = sys.argv[4]
     db = MySQLdb.connect(host="localhost", user=username,
-                        passwd=password, db=dbname, port=3306)
+                         passwd=password, db=dbname, port=3306)
     cur = db.cursor()
     cur.execute("""SELECT * FROM states WHERE name LIKE BINARY '{}%'
     ORDER BY states.id""".format(filter_value))
