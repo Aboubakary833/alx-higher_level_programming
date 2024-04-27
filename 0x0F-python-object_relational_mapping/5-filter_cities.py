@@ -13,9 +13,9 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=dbname, port=3306)
     cur = db.cursor()
-    cur.execute("""SELECT cities.id, cities.name, states.name FROM
-    cities INNER JOIN states ON states.id=cities.state_id WHERE
-    states.name=%s""", (name, ))
+    cur.execute("""SELECT cities.name FROM
+    cities INNER JOIN states ON states.id=cities.state_id
+    WHERE states.name=%s""", (name, ))
     rows = cur.fetchall()
     tmp = list(row[0] for row in rows)
     print(*tmp, sep=", ")
