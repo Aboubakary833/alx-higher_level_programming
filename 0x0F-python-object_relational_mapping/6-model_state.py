@@ -1,18 +1,16 @@
 #!/usr/bin/python3
+"""Start link class to table in database
 """
-Contains State class and Base, an instance of declarative_base()
-"""
-from sqlalchemy import Column, Integer, String, MetaData
-from sqlalchemy.ext.declarative import declarative_base
+import sys
+from model_state import Base, State
 
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
+from sqlalchemy import (create_engine)
 
-
-class State(Base):
-    """
-    Class with id and name attributes of each state
-    """
-    __tablename__ = 'states'
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
-    name = Column(String(128), nullable=False)
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    dbname = sys.argv[3]
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+    .format(username, password, dbname),
+                           pool_pre_ping=True)
+    Base.metadata.create_all(engine)
